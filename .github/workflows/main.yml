@@ -1,0 +1,25 @@
+on: [push]
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    name: A job to test eslint-changeset action
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+      - run: |
+          git fetch --no-tags --depth=1 origin main
+          git checkout -b main
+          git checkout ${{ github.event.push.head.sha }}
+      - name: Eslint Changeset Step
+        uses: ./ # Uses an action in the root directory
+        id: eslint-changeset
+        with:
+          main-branch: 'main'
+          file-extension: 'js'
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.eslint-changeset.outputs.something }}"

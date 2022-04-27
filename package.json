@@ -1,0 +1,24 @@
+{
+  "name": "gh-action-eslint-changeset",
+  "version": "1.0.0",
+  "description": "Github action that lints only the files within a particular commit to a branch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esrimo/gh-action-eslint-changeset.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esrimo/gh-action-eslint-changeset/issues"
+  },
+  "homepage": "https://github.com/esrimo/gh-action-eslint-changeset#readme",
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}

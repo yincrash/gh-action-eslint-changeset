@@ -10,6 +10,6 @@ git checkout $branch
 
 npm i -D
 
-files=$(git diff --name-only $branch $(git merge-base $branch $mainbranch) | grep '\.'$2'$')
+files=$(git diff --name-only $branch $(git merge-base $branch $mainbranch) | grep -E '.+\.('$2')$' $files)
 
 npx eslint $files
