@@ -1,4 +1,6 @@
-on: [push]
+on:
+  pull_request:
+    types: [opened, edited, reopened]
 
 jobs:
   test_job:
@@ -12,8 +14,10 @@ jobs:
       - run: |
           git fetch --no-tags --depth=1 origin main
           git checkout main 
-          git pull --all
-          git checkout {{github.event.push.head.sha}}
+          echo '+++++++++++++++++++++++++++++++++++++++++++'
+          echo ${{ github.event.pull_request.head.sha }}
+          echo '+++++++++++++++++++++++++++++++++++++++++++'
+          git checkout ${{ github.event.pull_request.head.sha }}
       - name: Eslint Changeset Step
         uses: ./ # Uses an action in the root directory
         id: eslint-changeset
