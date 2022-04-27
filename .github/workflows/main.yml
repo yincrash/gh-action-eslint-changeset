@@ -20,7 +20,7 @@ jobs:
           echo '++++++++++++++++++++++++++++++++++++++++++++'
           echo ${{ github.head_ref }}
           echo '++++++++++++++++++++++++++++++++++++++++++++'
-          git checkout ${{ github.event.pull_request.head.sha }}
+          git checkout ${{ github.head_ref }}
       - name: Eslint Changeset Step
         uses: ./ # Uses an action in the root directory
         id: eslint-changeset
