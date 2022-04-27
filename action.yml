@@ -4,8 +4,12 @@ description: 'Runs eslint on a changeset for a branch'
 inputs:
   main-branch:
     description: 'Main repo branch'
-    required: true
+    required: false
     default: 'master'
+  file-extension:
+    description: 'File extension to lint, eg: ts'
+    required: false
+    default: 'js'
 outputs:
   something:
     description: 'for now nothing, but maybe used to validate if linting failed, i.e: had output'
@@ -14,3 +18,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.main-branch }}
+    - ${{ inputs.file-extension }}
