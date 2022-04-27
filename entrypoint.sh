@@ -9,6 +9,12 @@ branch=$(git branch | grep '*' | sed s/*'\s'//g)
 
 git checkout $branch 
 
-files=$(git diff --name-only $branch $(git merge-base $branch $mainbranch) | grep '\.'$2'$')
+echo "*****************************************************************"
+git branch
+echo "*****************************************************************"
 
-npx eslint $files
+exit 1
+
+# files=$(git diff --name-only $branch $(git merge-base $branch $mainbranch) | grep '\.'$2'$')
+
+# npx eslint $files
