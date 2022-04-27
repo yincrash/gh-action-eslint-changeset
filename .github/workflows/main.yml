@@ -1,6 +1,8 @@
 on:
   pull_request:
     types: [opened, edited, reopened]
+    paths: 
+      - '**.js'
 
 jobs:
   test_job:
