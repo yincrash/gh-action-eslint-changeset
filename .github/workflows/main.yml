@@ -12,7 +12,6 @@ jobs:
       - run: |
           git fetch --no-tags --depth=1 origin main
           git checkout -b main
-          git checkout ${{ github.event.push.head.sha }}
       - name: Eslint Changeset Step
         uses: ./ # Uses an action in the root directory
         id: eslint-changeset

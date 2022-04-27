@@ -4,9 +4,7 @@ git config --global --add safe.directory /github/workspace
 
 mainbranch=$1
 
-echo "================================================================"
-git branch
-echo "================================================================"
+git checkout $mainbranch
 
 branch=$(git branch | grep '*' | sed s/*'\s'//g)
 
