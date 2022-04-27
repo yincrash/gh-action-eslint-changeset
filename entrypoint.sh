@@ -6,7 +6,8 @@ mainbranch=$1
 
 
 branch=$(git branch | grep '*' | sed s/*'\s'//g) 
-git checkout $mainbranch
+
+git checkout $branch 
 
 files=$(git diff --name-only $branch $(git merge-base $branch $mainbranch) | grep '\.'$2'$')
 
