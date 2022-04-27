@@ -37,7 +37,7 @@ jobs:
           git checkout main 
           git checkout ${{ github.head_ref }}
       - name: Eslint Changeset Step
-        uses: actions/gh-action-eslint-changeset@v1
+        uses: esrimo/gh-action-eslint-changeset@v1
         id: eslint-changeset
         with:
           main-branch: 'main'
