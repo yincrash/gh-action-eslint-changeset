@@ -17,7 +17,7 @@ In order for this action to work properly, it must be set up along with [Checkou
 ```yml
 on:
   pull_request:
-    types: [opened, edited, reopened]
+    types: [opened, edited, reopened, synchronize]
     paths: # make sure this action only runs when specific file extensions have been added/modified
       - '**.js'
       - '**.jsx'
