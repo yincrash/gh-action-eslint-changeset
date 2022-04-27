@@ -9,7 +9,7 @@ branch=$(git branch | grep '*' | sed s/*'\s'//g)
 
 git checkout $branch 
 
-npm i --only=dev
+npm i -D
 
 files=$(git diff --name-only $branch $(git merge-base $branch $mainbranch) | grep '\.'$2'$')
 
