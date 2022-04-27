@@ -10,9 +10,6 @@ inputs:
     description: 'File extension to lint, eg: ts'
     required: false
     default: 'js'
-outputs:
-  something:
-    description: 'for now nothing, but maybe used to validate if linting failed, i.e: had output'
 runs:
   using: 'docker'
   image: 'Dockerfile'
