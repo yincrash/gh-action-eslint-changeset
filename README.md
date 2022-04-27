@@ -1,10 +1,9 @@
-# Github Action Eslint Changesest
+# Github Action ESLint Changesest
 
 Github action that lints only the files within a particular commit to a branch, when a pull request is established.
 
 ### Notes:
   - Github workflow **must** be configured with Checkout V3.
-  - This action currently only supports [ESLint](https://eslint.org/).
   - ESLint must be part of the [devDependencies](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file) section of the `package.json` file.
 
 ### Inputs
