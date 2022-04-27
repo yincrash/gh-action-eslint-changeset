@@ -1,0 +1,16 @@
+name: 'Eslint Changeset'
+author: 'esrimo'
+description: 'Runs eslint on a changeset for a branch'
+inputs:
+  main-branch:
+    description: 'Main repo branch'
+    required: true
+    default: 'master'
+outputs:
+  something:
+    description: 'for now nothing, but maybe used to validate if linting failed, i.e: had output'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.main-branch }}
