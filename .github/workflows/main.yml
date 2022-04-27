@@ -17,12 +17,9 @@ jobs:
       - run: |
           git fetch --no-tags --depth=1 origin main
           git checkout main 
-          echo '++++++++++++++++++++++++++++++++++++++++++++'
-          echo ${{ github.head_ref }}
-          echo '++++++++++++++++++++++++++++++++++++++++++++'
           git checkout ${{ github.head_ref }}
       - name: Eslint Changeset Step
-        uses: ./ # Uses an action in the root directory
+        uses: ./
         id: eslint-changeset
         with:
           main-branch: 'main'
