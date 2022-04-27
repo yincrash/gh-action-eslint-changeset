@@ -1,6 +1,9 @@
 name: 'Eslint Changeset'
 author: 'esrimo'
 description: 'Runs eslint on a changeset for a branch'
+branding:
+  icon: 'git-pull-request'
+  color: 'orange'
 inputs:
   main-branch:
     description: 'Main repo branch'
