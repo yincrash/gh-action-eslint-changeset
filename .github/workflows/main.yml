@@ -14,9 +14,9 @@ jobs:
       - run: |
           git fetch --no-tags --depth=1 origin main
           git checkout main 
-          echo '+++++++++++++++++++++++++++++++++++++++++++'
+          echo '++++++++++++++++++++++++++++++++++++++++++++'
           echo ${{ github.event.pull_request.head.sha }}
-          echo '+++++++++++++++++++++++++++++++++++++++++++'
+          echo '++++++++++++++++++++++++++++++++++++++++++++'
           git checkout ${{ github.event.pull_request.head.sha }}
       - name: Eslint Changeset Step
         uses: ./ # Uses an action in the root directory
