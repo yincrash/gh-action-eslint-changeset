@@ -4,7 +4,9 @@ git config --global --add safe.directory /github/workspace
 
 mainbranch=$1
 
-git pull
+echo "================================================================"
+git branch
+echo "================================================================"
 
 branch=$(git branch | grep '*' | sed s/*'\s'//g)
 
