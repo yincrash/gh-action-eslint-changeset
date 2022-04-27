@@ -4,14 +4,12 @@ git config --global --add safe.directory /github/workspace
 
 mainbranch=$1
 
-branch=$(git branch | grep '*' | sed s/*'\s'//g)
+branch=$(git branch | grep '*' | sed s/*'\s'//g) 
 
-echo "*****************************************************************"
-git branch
-echo "*****************************************************************"
+git checkout $branch 
 
-exit 1
+npm i -D
 
-# files=$(git diff --name-only $branch $(git merge-base $branch $mainbranch) | grep '\.'$2'$')
+files=$(git diff --name-only $branch $(git merge-base $branch $mainbranch) | grep '\.'$2'$')
 
-# npx eslint $files
+npx eslint $files
