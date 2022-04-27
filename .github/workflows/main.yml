@@ -17,7 +17,7 @@ jobs:
       - run: |
           git fetch --no-tags --depth=1 origin main
           git checkout main 
-          git checkout ${{ github.head_ref }}
+          git checkout -
       - name: Eslint Changeset Step
         uses: ./
         id: eslint-changeset
