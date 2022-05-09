@@ -1,17 +1,13 @@
 {
   "name": "gh-action-eslint-changeset",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Github action that lints only the files within a particular commit to a branch, on a pull request event.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/esrimo/gh-action-eslint-changeset.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "esrimo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/esrimo/gh-action-eslint-changeset/issues"
