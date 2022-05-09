@@ -10,9 +10,12 @@ inputs:
     required: false
     default: 'master'
   file-extension:
-    description: 'File extension to lint, eg: ts'
+    description: 'File extension to lint, eg: ts. For multiple extensions, separate them with pipe symbol: |'
     required: false
     default: 'js'
+  npmtoken:
+    description: 'NPM Access Token'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'

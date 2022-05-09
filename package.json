@@ -1,6 +1,6 @@
 {
   "name": "gh-action-eslint-changeset",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "Github action that lints only the files within a particular commit to a branch, on a pull request event.",
   "repository": {
     "type": "git",
