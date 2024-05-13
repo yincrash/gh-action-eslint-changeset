@@ -16,4 +16,4 @@ npm i -D
 
 files=$(git diff --name-only $branch $(git merge-base $branch $mainbranch) | grep -E '.+\.('$2')$')
 
-npx eslint $files
+npx eslint $files --no-error-on-unmatched-pattern
